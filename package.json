@@ -1,7 +1,7 @@
 {
   "name": "querystringify-ts",
-  "version": "0.1.1",
-  "description": "create npm package with typescript",
+  "version": "0.1.2",
+  "description": "querystringify with typescript",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
@@ -13,6 +13,15 @@
     "url": "git+https://github.com/wangz-code/querystringify-ts"
   },
   "keywords": [
+    "query",
+    "string",
+    "query-string",
+    "querystring",
+    "qs",
+    "stringify",
+    "parse",
+    "decode",
+    "encode",
     "typescript"
   ],
   "author": "wangz-code",

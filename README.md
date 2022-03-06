@@ -30,6 +30,7 @@ console.log(stringify(params));
 
 ```js
 import stringify = require('querystringify-ts').stringify;
+// const { stringify, parse } = require('querystringify-ts');
 
 const params = {
     "foo" : "bar"
