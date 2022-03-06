@@ -1,61 +1,34 @@
-# querystringify
+# ts-hi
 
-[![Version npm](https://img.shields.io/npm/v/querystringify.svg?style=flat-square)](https://www.npmjs.com/package/querystringify)[![Build Status](https://img.shields.io/github/workflow/status/unshiftio/querystringify/CI/master?label=CI&style=flat-square)](https://github.com/unshiftio/querystringify/actions?query=workflow%3ACI+branch%3Amaster)[![Coverage Status](https://img.shields.io/coveralls/unshiftio/querystringify/master.svg?style=flat-square)](https://coveralls.io/r/unshiftio/querystringify?branch=master)
+[![Build Status](https://travis-ci.org/youthcity/ts-hi.svg?branch=master)](https://travis-ci.org/youthcity/ts-hi)
+[![Coverage Status](https://coveralls.io/repos/github/youthcity/ts-hi/badge.svg)](https://coveralls.io/github/youthcity/ts-hi)
 
-A somewhat JSON compatible interface for query string parsing. This query string
-parser is dumb, don't expect to much from it as it only wants to parse simple
-query strings. If you want to parse complex, multi level and deeply nested
-query strings then you should ask your self. WTF am I doing?
+## Install
 
-## Installation
-
-This module is released in npm as `querystringify`. It's also compatible with
-`browserify` so it can be used on the server as well as on the client. To
-install it simply run the following command from your CLI:
-
-```
-npm install --save querystringify
+```sh
+npm install ts-hi
+yarn add ts-hi
 ```
 
 ## Usage
 
-In the following examples we assume that you've already required the library as:
+### Typescript
+```
+import { add } from 'ts-hi';
 
-```js
-'use strict';
-
-var qs = require('querystringify');
+console.log(add(1, 2));
 ```
 
-### qs.parse()
+### javascript
 
-The parse method transforms a given query string in to an object. Parameters
-without values are set to empty strings. It does not care if your query string
-is prefixed with a `?`, a `#`, or not prefixed. It just extracts the parts
-between the `=` and `&`:
+```
+import add = require('ts-hi).add;
 
-```js
-qs.parse('?foo=bar');         // { foo: 'bar' }
-qs.parse('#foo=bar');         // { foo: 'bar' }
-qs.parse('foo=bar');          // { foo: 'bar' }
-qs.parse('foo=bar&bar=foo');  // { foo: 'bar', bar: 'foo' }
-qs.parse('foo&bar=foo');      // { foo: '', bar: 'foo' }
+console.log(add(1, 2));
 ```
 
-### qs.stringify()
+## Test
 
-This transforms a given object in to a query string. By default we return the
-query string without a `?` prefix. If you want to prefix it by default simply
-supply `true` as second argument. If it should be prefixed by something else
-simply supply a string with the prefix value as second argument:
-
-```js
-qs.stringify({ foo: bar });       // foo=bar
-qs.stringify({ foo: bar }, true); // ?foo=bar
-qs.stringify({ foo: bar }, '#');  // #foo=bar
-qs.stringify({ foo: '' }, '&');   // &foo=
+```sh
+npm run test
 ```
-
-## License
-
-MIT

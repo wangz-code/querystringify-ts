@@ -1,37 +1,35 @@
 {
-  "name": "querystringify",
-  "version": "2.2.0",
-  "description": "Querystringify - Small, simple but powerful query string parser.",
+  "name": "querystringify-ts",
+  "version": "0.1.1",
+  "description": "create npm package with typescript",
   "main": "index.js",
   "scripts": {
-    "test": "c8 --reporter=lcov --reporter=text mocha test.js",
-    "watch": "mocha --watch test.js"
+    "build": "tsc",
+    "test": "mocha --reporter spec",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js - - -R spec"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unshiftio/querystringify"
+    "url": "git+https://github.com/wangz-code/querystringify-ts"
   },
   "keywords": [
-    "query",
-    "string",
-    "query-string",
-    "querystring",
-    "qs",
-    "stringify",
-    "parse",
-    "decode",
-    "encode"
+    "typescript"
   ],
-  "author": "Arnout Kazemier",
+  "author": "wangz-code",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unshiftio/querystringify/issues"
+    "url": "https://github.com/youthcity/ts-hi/issues"
   },
-  "homepage": "https://github.com/unshiftio/querystringify",
+  "homepage": "https://github.com/youthcity/ts-hi#readme",
   "devDependencies": {
-    "assume": "^2.1.0",
-    "c8": "^7.3.0",
-    "mocha": "^9.1.3",
-    "pre-commit": "^1.2.2"
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "typescript": "^3.0.3"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
