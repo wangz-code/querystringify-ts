@@ -18,9 +18,9 @@
   "author": "wangz-code",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/youthcity/ts-hi/issues"
+    "url": "https://github.com/wangz-code/querystringify-ts/issues"
   },
-  "homepage": "https://github.com/youthcity/ts-hi#readme",
+  "homepage": "https://github.com/wangz-code/querystringify-ts#readme",
   "devDependencies": {
     "chai": "^4.1.2",
     "coveralls": "^3.0.2",
