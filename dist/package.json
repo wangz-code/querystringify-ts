@@ -1,0 +1,44 @@
+{
+  "name": "querystringify-ts",
+  "version": "0.1.2",
+  "description": "querystringify with typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js - - -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangz-code/querystringify-ts"
+  },
+  "keywords": [
+    "query",
+    "string",
+    "query-string",
+    "querystring",
+    "qs",
+    "stringify",
+    "parse",
+    "decode",
+    "encode",
+    "typescript"
+  ],
+  "author": "wangz-code",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wangz-code/querystringify-ts/issues"
+  },
+  "homepage": "https://github.com/wangz-code/querystringify-ts#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "typescript": "^3.0.3"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
+}
