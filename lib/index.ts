@@ -78,7 +78,7 @@ function querystring(query: string) {
  * @description qs.stringify({ foo: '' }, '&');   // &foo=
  * @api public
  */
-function querystringify(obj: { [k: string]: any }, prefix?: string) {
+function querystringify(obj: { [k: string]: any }, prefix?: string | boolean) {
 	prefix = prefix || "";
 
 	let pairs = [],
