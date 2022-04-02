@@ -27,7 +27,7 @@ declare function querystring(query: string): {
  */
 declare function querystringify(obj: {
     [k: string]: any;
-}, prefix?: string): string;
+}, prefix?: string | boolean): string;
 export declare const stringify: typeof querystringify;
 export declare const parse: typeof querystring;
 export {};
